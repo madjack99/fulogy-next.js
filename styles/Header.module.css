@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.notification {
+  padding-right: 30px;
+  border-right: 2px solid white;
+  cursor: pointer;
+}
+
+.avatar {
+  margin: 0 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.person {
+  color: white;
+}

@@ -1,11 +1,13 @@
 import Head from 'next/head';
-import styles from '../styles/Home.module.css';
-import { makeStyles } from '@material-ui/core/styles';
 
-import Button from '@material-ui/core/Button';
+import Header from './Header';
+
+import { makeStyles } from '@material-ui/core/styles';
+import styles from '../styles/Home.module.css';
 
 const useStyles = makeStyles(() => ({
   wrapper: {
+    padding: '20px 25px 0 35px',
     backgroundImage: `url('/background-image.svg')`,
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'contain',
@@ -22,9 +24,7 @@ export default function Home() {
         <title>Create Next App</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <Button variant='contained' color='primary'>
-        Primary
-      </Button>
+      <Header />
     </div>
   );
 }
