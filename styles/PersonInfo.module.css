@@ -1,0 +1,16 @@
+.personInfo {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px 0px gainsboro;
+}
+
+.infoItem {
+  padding: 30px 75px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #cae7fe;
+}
+
+.infoImage {
+  margin-right: 20px;
+}

@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Header from './Header';
 import PageInfo from './PageInfo';
 import PersonName from './PersonName';
+import PersonInfo from './PersonInfo';
 
 import { makeStyles } from '@material-ui/core/styles';
 import styles from '../styles/Home.module.css';
@@ -29,6 +30,7 @@ export default function Home() {
       <Header />
       <PageInfo />
       <PersonName />
+      <PersonInfo />
     </div>
   );
 }
