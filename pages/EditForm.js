@@ -43,7 +43,7 @@ const EditForm = () => {
     const mobileValid = /^[- +()]*[0-9][- +()0-9]*$/.test(mobile);
     if (!mobileValid) setMobileError(true);
 
-    if (!nameError && !emailError && !mobileError) {
+    if (nameValid && emailValid && mobileValid) {
       setDisplayConfirmation(true);
     }
   };
