@@ -1,0 +1,40 @@
+.form {
+  padding: 40px 30px;
+  height: 245px;
+  background-color: white;
+  box-shadow: 2px 2px 5px 3px gainsboro;
+  border-radius: 10px;
+}
+
+.fieldsWrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0 50px;
+}
+
+.formItem {
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+
+.formItem img {
+  margin-right: 20px;
+}
+
+.submitBtn {
+  display: block;
+  width: 210px;
+  height: 50px;
+  margin: 0 auto;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  color: white;
+  background-color: #01bda7;
+  cursor: pointer;
+}
+
+.submitBtn:hover {
+  filter: brightness(90%);
+}

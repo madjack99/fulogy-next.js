@@ -6,7 +6,6 @@ import PersonName from './PersonName';
 import PersonInfo from './PersonInfo';
 
 import { makeStyles } from '@material-ui/core/styles';
-import styles from '../styles/Home.module.css';
 
 const useStyles = makeStyles(() => ({
   wrapper: {
