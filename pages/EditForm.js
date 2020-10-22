@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 
+import Confirmation from './Confirmation';
+
 import TextField from '@material-ui/core/TextField';
-import { makeStyles } from '@material-ui/core/styles';
 
 import styles from '../styles/EditForm.module.css';
 
@@ -12,6 +13,8 @@ const EditForm = () => {
   const [emailError, setEmailError] = useState(false);
   const [mobile, setMobile] = useState('');
   const [mobileError, setMobileError] = useState(false);
+
+  const [displayConfirmation, setDisplayConfirmation] = useState(false);
 
   const handleNameChange = (e) => {
     setNameError(false);
@@ -39,6 +42,10 @@ const EditForm = () => {
 
     const mobileValid = /^[- +()]*[0-9][- +()0-9]*$/.test(mobile);
     if (!mobileValid) setMobileError(true);
+
+    if (!nameError && !emailError && !mobileError) {
+      setDisplayConfirmation(true);
+    }
   };
 
   return (
@@ -91,6 +98,14 @@ const EditForm = () => {
       <button className={styles.submitBtn} type='submit'>
         Сохранить изменения
       </button>
+      {displayConfirmation && (
+        <Confirmation
+          name={name}
+          email={email}
+          mobile={mobile}
+          setDisplayConfirmation={setDisplayConfirmation}
+        />
+      )}
     </form>
   );
 };
