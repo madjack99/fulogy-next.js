@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+import { updateUserInfo } from '../stores/userInfoStore';
 import { toggleEdit } from '../stores/editStore';
 
 import styles from '../styles/Confirmation.module.css';
@@ -9,6 +10,7 @@ const Confirmation = ({ name, email, mobile, setDisplayConfirmation }) => {
 
   const saveData = () => {
     localStorage.setItem('UserInfo', JSON.stringify({ name, email, mobile }));
+    updateUserInfo({ name, email, mobile });
     setDisplayAlert(true);
   };
 

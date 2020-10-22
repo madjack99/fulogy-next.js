@@ -1,17 +1,24 @@
 import React, { useState } from 'react';
+import { useStore } from 'effector-react';
 
+import { $userInfoStore } from '../stores/userInfoStore';
 import Confirmation from './Confirmation';
 
 import TextField from '@material-ui/core/TextField';
-
 import styles from '../styles/EditForm.module.css';
 
 const EditForm = () => {
-  const [name, setName] = useState('');
+  const {
+    name: storedName,
+    email: storedEmail,
+    mobile: storedMobile,
+  } = useStore($userInfoStore);
+
+  const [name, setName] = useState(storedName);
   const [nameError, setNameError] = useState(false);
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState(storedEmail);
   const [emailError, setEmailError] = useState(false);
-  const [mobile, setMobile] = useState('');
+  const [mobile, setMobile] = useState(storedMobile);
   const [mobileError, setMobileError] = useState(false);
 
   const [displayConfirmation, setDisplayConfirmation] = useState(false);

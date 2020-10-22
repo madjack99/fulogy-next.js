@@ -1,8 +1,12 @@
 import React from 'react';
+import { useStore } from 'effector-react';
+
+import { $userInfoStore } from '../stores/userInfoStore';
 
 import styles from '../styles/Header.module.css';
 
 const Header = () => {
+  const { name } = useStore($userInfoStore);
   return (
     <header className={styles.header}>
       <img
@@ -15,7 +19,7 @@ const Header = () => {
         src='/avatar-small.svg'
         alt='avatar small'
       />
-      <p className={styles.person}>John Doe</p>
+      <p className={styles.person}>{name}</p>
     </header>
   );
 };
