@@ -32,3 +32,21 @@
 .editBtn {
   margin-right: 10px;
 }
+
+@media (max-width: 700px) {
+  .personName {
+    height: 70px;
+  }
+
+  .avatar {
+    width: 40px;
+  }
+
+  .firstName {
+    font-size: 16px;
+  }
+
+  .editBtn {
+    display: none;
+  }
+}

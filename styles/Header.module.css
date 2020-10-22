@@ -19,3 +19,12 @@
 .person {
   color: white;
 }
+
+@media (max-width: 700px) {
+  .notification {
+    width: 55px;
+  }
+  .avatar {
+    width: 24px;
+  }
+}
